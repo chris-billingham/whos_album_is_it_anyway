@@ -39,3 +39,6 @@ bsides <- map_dfr(blur_special_albums, lyric_plus_album) %>%
   anti_join(albums)
 
 # right we're good to go
+# save it off so we don't have to again
+saveRDS(albums, "data/albums.rds")
+saveRDS(bsides, "data/bsides.rds")
